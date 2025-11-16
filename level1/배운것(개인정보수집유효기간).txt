@@ -1,0 +1,6 @@
+const term = Number(termMap[privacie[1]) 
+--> termMap(privacie[1])로 값을 꺼내려고 하였을때 NAN이 뜨던이유
+
+termMap => new Map()으로 - Map객체만듬
+but termMap[term[0]] = term[1]이런식으로 값을 넣음
+--> Map이 아니라 일반객체에 프로퍼티 추가하는 방식 따라서 Map내부에는 저장된 값이 없기 때문에 termMap.get()으로 접근시 undefined
