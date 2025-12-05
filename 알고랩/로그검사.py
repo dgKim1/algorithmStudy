@@ -24,6 +24,10 @@ for _ in range(T):
     for _ in range(n):
         log = input().rstrip('\n')  # 뒤에 개행만 제거
 
+
+        if len(log) > 100:
+            invalid += 1
+            continue
         # 패턴과 완전히 일치하지 않으면 비정상 로그
         if pattern.fullmatch(log) is None:
             invalid += 1
